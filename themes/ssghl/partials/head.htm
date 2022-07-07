@@ -1,0 +1,125 @@
+<header class="site-main-header">
+        <div class="menu-overlay search-result-menu " ng-app="shanta" ng-controller="searchCtrl">
+            <div class="pull-right hamburger hamburger-close ">
+                <a href="#">
+                    <img src="{{ 'assets/img/icons/Close.svg'|theme }}" alt="close icon">
+                </a>
+            </div>
+            <div class="menu-column column-left has-inner-scroller "
+                 style="background-image: url(assets/img/images/menu-1.jpg);">
+                <div class="menu-column-gap">
+                    <div class="column-title-container">
+
+                    </div>
+                </div>
+                <div class="menu-column-gap inner-scroller mcustom-scrollar">
+                    <h1 class="heading-secondary text-white mb-50 ">
+                        search projects
+                    </h1>
+                    <div class="text-white">
+                        <p>We understand that no two projects are ever the same, so when it comes to appointing a
+                            contractor to deliver the services you need confidence is key.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-column column-middle has-inner-scroller">
+                <div class="menu-column-gap inner-scroller mcustom-scrollar">
+                    <form class="form-primary text-white custom-select">
+                        <div class="form-group">
+                            <div>
+                                <label>By Project</label>
+                                <input type="text" placeholder="Type the project name" ng-model="search.name">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div>
+                                <label>By Location</label>
+                                <select name="search.address" id="search.address" ng-model="search.address">
+                                    <option value="">Any Location</option>
+                                    <option value="New Baily Road">New Baily Road</option>
+                                    <option value="Dhanmondi">Dhanmondi</option>
+                                    <option value="Tejgaon">Tejgaon</option>
+                                    <option value="Gulshan">Gulshan</option>
+                                    <option value="Bashundhara R/A">Bashundhara R/A</option>
+                                    <option value="Mirpur DOHS">Mirpur DOHS</option>
+                                    <option value="Baridhara">Baridhara</option>
+                                    <option value="Baily Road">Baily Road</option>
+                                    <option value="Mohammadpur">Mohammadpur</option>
+                                    <option value="Banani">Banani</option>
+                                    <option value="Dhaka Cantonment">Dhaka Cantonment</option>
+                                    <option value="Banani DOHS">Banani DOHS</option>
+                                    <option value="Uttara">Uttara</option>
+                                    <option value="Paribagh">Paribagh</option>
+                                    <option value="Indira Road">Indira Road</option>
+                                    <option value="New Eskaton">New Eskaton</option>
+                                    <option value="Banasree">Banasree</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class=''>
+                                <label for="search.size">By Size (Sft)
+                                </label>
+                                <select name="search.size" id="search.size" ng-model="size">
+                                    <option value="">All Size</option>
+                                    <option value="600-1000">BELOW 1000</option>
+                                    <option value="1001-1500">1000 - 1500</option>
+                                    <option value="1501-2000">1500 - 2000</option>
+                                    <option value="2001-2500">2000 - 2500</option>
+                                    <option value="2601-3000">2500 - 3000</option>
+                                    <option value="3001-15000">ABOVE 3000</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div>
+                                <label for="search.type">By Type</label>
+                                <select name="search.type" id="search.type" ng-model="search.type">
+                                    <option value="">All Type</option>
+                                    <option value="residential">Residential</option>
+                                    <option value="commercial">Commercial</option>
+                                </select>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="menu-column column-right text-white has-inner-scroller">
+                <div class="menu-column-gap">
+                    <div class="column-title-container">
+                        <div class="heading-third">
+                            <span ng-bind="(filteredResults.length > 1 ? (filteredResults.length + ' Projects') : (filteredResults.length + ' Project')) + ' Matched'"></span>
+                        </div>
+                        <div class="" ng-show="filteredResults.length == 0">
+                            Sorry no result found !
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-column-gap inner-scroller mcustom-scrollar">
+                    <div class="full-height-desktop">
+                        <ul class="search-result-list">
+                            <li ng-repeat="result in filteredResults = (results | filter:search | filter:searchSize ) | orderBy:name">
+                                <a ng-href="{{result.link}}">
+                                    <div class="search-thumb-wrapper">
+                                        <div class="search-thumb"
+                                             ng-style="{'background-image':'url({{result.image}})'}"></div>
+                                    </div>
+                                    <div class="search-meta">
+                                        <h3 class="search-item-title">{{result.name | makeUpper}}</h3>
+                                        <div class="search-item-subtitle">{{result.address}}</div>
+                                        <!-- <div>
+                                            <small>Type: {{result.type}}</small>
+                                        </div>
+                                        <div>
+                                            <small>Size: {{result.size}} Sft</small>
+                                        </div> -->
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>

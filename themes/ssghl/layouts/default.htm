@@ -1,0 +1,140 @@
+description = "Default layout"
+==
+<!DOCTYPE html>
+<html lang="en-US">
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<head>
+    <!-- End Google Tag Manager -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SSG Holdings Ltd. | Leading Real Estate Company in Bangladesh | Setting Standards</title>
+
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="preload" media="all">
+
+    <link href="{{ 'assets/css/lightbox/ekko-lightbox.minbd8a.css'|theme }}" rel="stylesheet">
+    <link href="{{ 'assets/css/home-map/mapbd8a.css'|theme }}" rel="stylesheet">
+
+    <link href="{{ 'assets/css/bundle.min51d0.css'|theme }}" rel="stylesheet" media="all">
+    <link href="{{ 'assets/css/layerslider.minc1c8.css'|theme }}" rel="stylesheet" media="all">
+    <link href="{{ 'assets/css/style.minb0af.css'|theme }}" rel="stylesheet" media="all">
+    <link href="{{ 'assets/css/yt-lazyloadc1c8.css'|theme }}" rel="stylesheet" media="all">
+    <link href="{{ 'assets/css/customize.css'|theme }}" rel="stylesheet" media="all">
+    <script src="{{ 'assets/js/jquery.min0cda.js'|theme }}"></script>
+    <script>
+        var site_url_info = {
+            // baseUrl: 'https://shantaholdings.com',
+            // themeUrl: 'https://shantaholdings.com/themes/real_estate'
+        }
+
+    </script>
+</head>
+<body class="bodyclass ">
+
+<div class="site-main-wrapper ">
+{% partial 'openmenu' %}
+
+{% page %}
+
+{% partial 'footer' %}
+</div>
+
+
+
+<form id="w0" action="https://shantaholdings.com/" method="post">
+    <input type="hidden" name="_csrf-frontend" value="-57hkL7v29Jiet8KF1EhSoj0fbIOzlucMxUa0tDw1zaa767k0aitkzBOjkInBGMH7I0n9WGvF_Zcc2KxiJ-tBw==">
+</form>
+
+
+<script>
+    $("a[href='#top']").click(function() {
+        $("html, body").animate({ scrollTop: 0 }, "slow");
+        return false;
+    });
+</script>
+
+<script src="{{ 'assets/js/ekko-lightbox.min.js'|theme }}" defer></script>
+<script src="{{ 'assets/js/yii.js'|theme }}"></script>
+<script src="{{ 'assets/js/yii.activeForm.js'|theme }}"></script>
+<script src="{{ 'assets/js/upload_filesffb7.js'|theme }}"></script>
+<script src="{{ 'assets/js/layerslider.transitionsb972.js'|theme }}"></script>
+<script src="{{ 'assets/js/layerslider.kreaturamedia.jqueryb972.js'|theme }}"></script>
+<script src="{{ 'assets/js/min/bundle.minb972.js'|theme }}"></script>
+<script src="{{ 'assets/js/lg-video158b.js'|theme }}"></script>
+<script src="{{ 'assets/js/yt-lazyload.min450a.js'|theme }}"></script>
+<script src="{{ 'assets/js/script450a.js'|theme }}"></script>
+<script>jQuery(function ($) {
+    jQuery('#question-general').yiiActiveForm([], []);
+    $( window ).load(function() {
+        setTimeout(function () {
+            $('.Popup-wrap').fadeIn(900)
+        },900)
+
+        setTimeout(function () {
+            $('.Popup-wrap').fadeOut(500)
+        },10000)
+
+        $('.Popup-close').click(function () {
+            $('.Popup-wrap').fadeOut(500)
+        })
+    });
+
+    jQuery('#w0').yiiActiveForm([], []);
+
+
+    $(document).delegate('.dynamic_submit_btn', 'click', function(event, jqXHR, settings) {
+
+        var form = $(this).closest('form');
+        var form_id = form.attr('id');
+
+        if(form.find('.has-error').length) {
+            return false;
+        }
+        $('.dynamic_submit_btn').attr('disabled', true);
+
+        $.ajax({
+            url: form.attr('action'),
+            type: 'post',
+            data: form.serialize(),
+            beforeSend : function( request ){
+                $('.success_wrapper_'+form_id).addClass('hide');
+                $('.error_wrapper_'+form_id).addClass('hide');
+            },
+            success: function(data) {
+                if(data.result=='success'){
+                    form[0].reset();
+                    $('.uploded_file_cv').html('');
+                    $('.success_wrapper_'+form_id).removeClass('hide');
+                    $('.error_wrapper_'+form_id).addClass('hide');
+                    $('.success_container_'+form_id).html(data.msg);
+                    $('.dynamic_submit_btn').removeAttr('disabled');
+                    $('.error_container_'+form_id).html('');
+
+                    setTimeout(function() {
+                        $('.success_wrapper_'+form_id).addClass('hide');
+                        $('.form-overlay').removeClass('doit');
+                    }, 4000);
+                }
+                else{
+                    $('.error_container_'+form_id).html(data.msg);
+                    $('.success_container_'+form_id).html('');
+                    $('.success_wrapper_'+form_id).addClass('hide');
+                    $('.error_wrapper_'+form_id).removeClass('hide');
+
+                    $('.dynamic_submit_btn').removeAttr('disabled');
+
+                    setTimeout(function() {
+                        $('.error_wrapper_'+form_id).addClass('hide');
+                        $('.form-overlay').removeClass('doit');
+                    }, 4000);
+                }
+            }
+        });
+
+        return false;
+    });
+
+
+});</script>
