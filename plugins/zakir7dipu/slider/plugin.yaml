@@ -1,0 +1,6 @@
+plugin:
+    name: 'zakir7dipu.slider::lang.plugin.name'
+    description: 'zakir7dipu.slider::lang.plugin.description'
+    author: zakir7dipu
+    icon: wn-icon-slideshare
+    replaces: {  }
