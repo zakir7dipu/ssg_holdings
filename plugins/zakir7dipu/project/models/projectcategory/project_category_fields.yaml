@@ -1,0 +1,18 @@
+fields:
+    name:
+        label: 'Category Name'
+        span: full
+        required: 1
+        type: text
+    page_banner:
+        label: 'Category Page Banner'
+        span: auto
+        mode: image
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        imageWidth: '1280'
+        imageHeight: '293'
+        type: fileupload
+        commentAbove: 'File size will be 1280px X 293px'

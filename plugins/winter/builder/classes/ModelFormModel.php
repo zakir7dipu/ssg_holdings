@@ -100,7 +100,8 @@ class ModelFormModel extends ModelYamlModel
             }
 
             // Allow for multi-selection dropdowns
-            if ($field['type'] === 'dropdown' && $field['multiple'] === true) {
+//            && $field['multiple'] === true
+            if ($field['type'] === 'dropdown') {
                 if (!array_key_exists($name, $found)) {
                     $found[] = $name;
                     continue;

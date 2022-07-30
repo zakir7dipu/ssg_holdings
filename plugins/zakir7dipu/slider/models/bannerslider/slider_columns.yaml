@@ -1,0 +1,8 @@
+columns:
+    name:
+        label: Slider
+        type: text
+        searchable: true
+    banner:
+        label: Image
+        type: image

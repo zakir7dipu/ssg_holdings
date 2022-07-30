@@ -1,0 +1,19 @@
+fields:
+    name:
+        label: 'Slider Name'
+        span: auto
+        placeholder: 'Write the image name'
+        type: text
+    banner:
+        label: 'Slider Image'
+        mode: image
+        imageWidth: '1728'
+        imageHeight: '1033'
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        required: 1
+        type: fileupload
+        commentAbove: 'File should be 1728px X 1033px'

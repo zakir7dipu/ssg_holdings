@@ -1,0 +1,11 @@
+name: BannerSliderController
+modelClass: Zakir7dipu\Slider\Models\BannerSlider
+form: $/zakir7dipu/slider/models/bannerslider/slider_fields.yaml
+defaultRedirect: zakir7dipu/slider/bannerslidercontroller
+create:
+    redirect: 'zakir7dipu/slider/bannerslidercontroller/update/:id'
+    redirectClose: zakir7dipu/slider/bannerslidercontroller
+update:
+    redirect: zakir7dipu/slider/bannerslidercontroller
+    redirectClose: zakir7dipu/slider/bannerslidercontroller
+preview: {  }

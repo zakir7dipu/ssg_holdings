@@ -1,0 +1,10 @@
+name: ProjectCategoryController
+form: $/zakir7dipu/project/models/projectcategory/project_category_fields.yaml
+modelClass: Zakir7dipu\Project\Models\ProjectCategory
+defaultRedirect: zakir7dipu/project/projectcategorycontroller
+create:
+    redirect: 'zakir7dipu/project/projectcategorycontroller/update/:id'
+    redirectClose: zakir7dipu/project/projectcategorycontroller
+update:
+    redirect: zakir7dipu/project/projectcategorycontroller
+    redirectClose: zakir7dipu/project/projectcategorycontroller

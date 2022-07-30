@@ -1,0 +1,32 @@
+plugin:
+    name: 'zakir7dipu.project::lang.plugin.name'
+    description: 'zakir7dipu.project::lang.plugin.description'
+    author: zakir7dipu
+    icon: wn-icon-anchor
+    replaces: {  }
+permissions:
+    project_category_access:
+        tab: 'Project Category Access'
+        label: 'Project Category Access'
+    project_access:
+        tab: 'Project Access'
+        label: 'Project Access'
+navigation:
+    main-menu-item:
+        label: Projects
+        url: zakir7dipu/project/projectcategorycontroller
+        icon: icon-life-ring
+        sideMenu:
+            side-menu-item:
+                label: Category
+                url: zakir7dipu/project/projectcategorycontroller
+                icon: icon-sitemap
+                permissions:
+                    - project_category_access
+                attributes: {  }
+            side-menu-item2:
+                label: Projects
+                url: zakir7dipu/project/projectcontroller
+                icon: icon-anchor
+                permissions:
+                    - project_access

@@ -1,0 +1,17 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table zakir7dipu_project_category'
+    - builder_table_create_zakir7dipu_project_category.php
+1.0.3:
+    - 'Created table zakir7dipu_project_table'
+    - builder_table_create_zakir7dipu_project_table.php
+1.0.4:
+    - 'Updated table zakir7dipu_project_table'
+    - builder_table_update_zakir7dipu_project_table.php
+1.0.5:
+    - 'Updated table zakir7dipu_project_table'
+    - builder_table_update_zakir7dipu_project_table_2.php
+1.0.6:
+    - 'Updated table zakir7dipu_project_table'
+    - builder_table_update_zakir7dipu_project_table_3.php

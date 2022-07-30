@@ -1,0 +1,10 @@
+name: ProjectController
+form: $/zakir7dipu/project/models/project/project_fields.yaml
+modelClass: Zakir7dipu\Project\Models\Project
+defaultRedirect: zakir7dipu/project/projectcontroller
+create:
+    redirect: 'zakir7dipu/project/projectcontroller/update/:id'
+    redirectClose: zakir7dipu/project/projectcontroller
+update:
+    redirect: zakir7dipu/project/projectcontroller
+    redirectClose: zakir7dipu/project/projectcontroller

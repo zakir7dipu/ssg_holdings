@@ -1,0 +1,158 @@
+fields:
+    name:
+        label: 'Project Name'
+        span: auto
+        required: 1
+        type: text
+    address:
+        label: 'Project Address'
+        span: auto
+        required: 1
+        type: text
+    architect_name:
+        label: 'Project architect'
+        span: auto
+        required: 1
+        type: text
+    land_area:
+        label: 'Land Area'
+        span: auto
+        required: 1
+        type: text
+    sub_title:
+        label: 'Project in short'
+        span: full
+        type: text
+    land_orientation:
+        label: 'Land Orientation'
+        span: auto
+        required: 1
+        type: text
+    facing:
+        label: Facing
+        span: auto
+        type: text
+        commentAbove: 'Like "North / South"'
+    front_road:
+        label: 'Front Road'
+        span: auto
+        type: text
+    apartments_number:
+        label: 'Number of apartments'
+        span: auto
+        placeholder: ''
+        type: number
+    unit_size:
+        label: 'Size of units'
+        span: auto
+        type: text
+    basement_number:
+        label: 'Number of basements'
+        span: auto
+        type: text
+    car_parking:
+        label: 'Number of car parking'
+        span: auto
+        type: number
+    rajuk_approval_no:
+        label: 'RAJUK Approval No.'
+        span: auto
+        required: 1
+        type: text
+    feature_amenitie:
+        label: 'Project''s features & amenities'
+        size: ''
+        span: full
+        type: richeditor
+    map_location:
+        label: 'Google map location'
+        size: ''
+        span: full
+        type: textarea
+    type:
+        label: 'Project''s type'
+        options:
+            Residential: Residential
+            Commercial: Commercial
+        showSearch: true
+        span: auto
+        type: dropdown
+    category_id:
+        label: 'Project Category'
+        options:
+            1: Ongoing
+            2: Upcoming
+            3: Completed
+        showSearch: true
+        span: auto
+        required: 1
+        type: dropdown
+    project_thumb:
+        label: 'Project Thumb'
+        mode: image
+        imageWidth: '650'
+        imageHeight: '650'
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        required: 1
+        type: fileupload
+        commentAbove: 'File size will be 650px X 650px'
+    project_banner:
+        label: 'Project Banner'
+        mode: image
+        imageWidth: '1230'
+        imageHeight: '739'
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        required: 1
+        type: fileupload
+        commentAbove: 'File size will be 1230px X 739px'
+    left_side:
+        label: 'Left Side'
+        mode: image
+        imageWidth: '600'
+        imageHeight: '800'
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        required: 1
+        type: fileupload
+        commentAbove: 'File size will be 600px X 800px'
+    right_side:
+        label: 'Right Side'
+        mode: image
+        imageWidth: '1300'
+        imageHeight: '650'
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        required: 1
+        type: fileupload
+        commentAbove: 'File size will be 1300px X 650px'
+    gallery:
+        label: Gallery
+        span: full
+        mode: image
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        imageWidth: '650'
+        imageHeight: '650'
+        type: fileupload
+        commentAbove: 'File size will be 650px X 650px'
+    feature_project:
+        label: 'Is this project is a feature project?'
+        span: auto
+        default: 0
+        type: switch

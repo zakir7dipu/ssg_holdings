@@ -1,0 +1,8 @@
+columns:
+    name:
+        label: Category
+        type: text
+        searchable: true
+    page_banner:
+        label: Thumb
+        type: image

@@ -3,30 +3,14 @@
             <img src="{{ 'assets/img/icons/arrow-down.svg'|theme }}" alt="down arrow">
         </a>
         <div id="layerslider" class="fitvidsignore" style="width:100%; height:100%;">
+        {% if banner_sliders|length %}
+            {% for banner_slider in banner_sliders %}
             <div data-color="#FFFFFF" class="ls-slide banner-slider-item slider_topper" data-ls="slidedelay:5500;transition2d:12;">
-                <img src="{{ 'assets/images/1640865034SELe3.jpg'|theme }}"
+                <img src="{{ banner_slider.banner.path }}"
                      class="ls-bg" alt="Shantaholdings Slide">
             </div>
-            <div data-color="#FFFFFF" class="ls-slide banner-slider-item slider_topper" data-ls="slidedelay:5500;transition2d:12;">
-                <img src="{{ 'assets/images/1644926203XgbMY.jpg'|theme }}"
-                     class="ls-bg" alt="Shantaholdings Slide">
-            </div>
-            <div data-color="#FFFFFF" class="ls-slide banner-slider-item slider_topper" data-ls="slidedelay:5500;transition2d:12;">
-                <img src="{{ 'assets/images/1644926591JwK6U.jpg'|theme }}"
-                     class="ls-bg" alt="Shantaholdings Slide">
-            </div>
-            <div data-color="#FFFFFF" class="ls-slide banner-slider-item slider_topper" data-ls="slidedelay:5500;transition2d:12;">
-                <img src="{{ 'assets/images/1644926660eDYcq.jpg'|theme }}"
-                     class="ls-bg" alt="Shantaholdings Slide">
-            </div>
-            <div data-color="#FFFFFF" class="ls-slide banner-slider-item slider_topper" data-ls="slidedelay:5500;transition2d:12;">
-                <img src="{{ 'assets/images/1644926812PlM4A.jpg'|theme }}"
-                     class="ls-bg" alt="Shantaholdings Slide">
-            </div>
-            <div data-color="#FFFFFF" class="ls-slide banner-slider-item slider_topper" data-ls="slidedelay:5500;transition2d:12;">
-                <img src="{{ 'assets/images/1644926903bajOx.jpg'|theme }}"
-                     class="ls-bg" alt="Shantaholdings Slide">
-            </div>
+            {% endfor %}
+        {% endif %}
         </div>
 
 <!--         <div class="circle-menu inactive"> -->

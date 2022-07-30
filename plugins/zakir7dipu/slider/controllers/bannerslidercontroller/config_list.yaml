@@ -1,0 +1,12 @@
+title: BannerSliderController
+modelClass: Zakir7dipu\Slider\Models\BannerSlider
+list: $/zakir7dipu/slider/models/bannerslider/slider_columns.yaml
+recordUrl: 'zakir7dipu/slider/bannerslidercontroller/update/:id'
+noRecordsMessage: 'backend::lang.list.no_records'
+recordsPerPage: '6'
+showSetup: true
+showCheckboxes: true
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'

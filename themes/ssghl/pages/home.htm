@@ -3,6 +3,14 @@ url = "/"
 layout = "default"
 is_hidden = 0
 ==
+<?php
+use zakir7dipu\slider\Models\BannerSlider;
+
+function onStart(){
+    $this['banner_sliders'] = BannerSlider::orderBy('name','ASC')->with('banner')->get();
+}
+?>
+==
 
 <!-- {% partial 'popupvideo' %} -->
 {% partial 'slider' %}

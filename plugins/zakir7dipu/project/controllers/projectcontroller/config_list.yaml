@@ -1,0 +1,12 @@
+title: ProjectController
+modelClass: Zakir7dipu\Project\Models\Project
+list: $/zakir7dipu/project/models/project/project_columns.yaml
+recordUrl: 'zakir7dipu/project/projectcontroller/update/:id'
+noRecordsMessage: 'backend::lang.list.no_records'
+recordsPerPage: 20
+showSetup: true
+showCheckboxes: true
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'

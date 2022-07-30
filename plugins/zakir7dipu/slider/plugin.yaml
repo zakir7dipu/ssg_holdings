@@ -4,3 +4,14 @@ plugin:
     author: zakir7dipu
     icon: wn-icon-slideshare
     replaces: {  }
+permissions:
+    banner_slider_access:
+        tab: BannerSlider
+        label: 'Banner Slider'
+navigation:
+    main-menu-item:
+        label: 'Banner Slider'
+        url: zakir7dipu/slider/bannerslidercontroller
+        icon: icon-slideshare
+        permissions:
+            - banner_slider_access
