@@ -903,6 +903,7 @@ function newMenu() {
 
     /*main.js end*/
     /*custom.js start*/
+    let logoImage = document.querySelector("#logoMain").getAttribute("datasrc");
         var mmenu = $('#menu');
         mmenu.mmenu({
             offCanvas: {
@@ -917,7 +918,7 @@ function newMenu() {
                 {
                     position    : 'top',
                     content     : [
-                        '<div id="logo" class="site-logo"><a href="' + site_url_info.baseUrl + '"><img src="' + site_url_info.themeUrl + '/assets/img/logo_original.svg "></a></div>',
+                        '<div id="logo" class="site-logo"><a href="'+window.location.protocol+"//"+ window.location.host+'"><img src="'+window.location.protocol+"//"+ window.location.host + logoImage+'" class="__web-inspector-hide-shortcut__"></a></div>',
                         'prev',
                         'title'
                     ]

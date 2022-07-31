@@ -1,0 +1,12 @@
+<!-- <a href="#lands-to-landmark" class="animate-scroll scroll-down"> -->
+<!--             <img src="{{ 'assets/img/icons/arrow-down.svg'|theme }}" alt="down arrow"> -->
+<!--         </a> -->
+<div class="home-slider owl-carousel js-fullheight">
+    {% if banner_sliders|length %}
+        {% for banner_slider in banner_sliders %}
+            <div class="slider-item js-fullheight" style="background-image:url({{ banner_slider.banner.path }});">
+                <div class="overlay"></div>
+            </div>
+        {% endfor %}
+    {% endif %}
+  </div>
