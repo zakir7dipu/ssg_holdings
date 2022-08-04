@@ -3,6 +3,10 @@
 @font-face{font-family:'DIN Next LT Pro';src:url(../fonts/DINNextLTPro-Light.eot);src:url(../fonts/DINNextLTPro-Lightd41d.eot?#iefix) format("embedded-opentype"),url(../fonts/DINNextLTPro-Light.html) format("woff2"),url(../fonts/DINNextLTPro-Light.woff) format("woff"),url(../fonts/DINNextLTPro-Light.ttf) format("truetype"),url(../fonts/DINNextLTPro-Light.otf) format("opentype");font-weight:300;font-style:normal;font-stretch:normal;unicode-range:U+0020-00FE}
 @font-face{font-family:'DIN Next LT Pro';src:url(../fonts/DINNextLTPro-UltraLight.eot);src:url(../fonts/DINNextLTPro-UltraLightd41d.eot?#iefix) format("embedded-opentype"),url(../fonts/DINNextLTPro-UltraLight.html) format("woff2"),url(../fonts/DINNextLTPro-UltraLight.woff) format("woff"),url(../fonts/DINNextLTPro-UltraLight.ttf) format("truetype"),url(../fonts/DINNextLTPro-UltraLight.otf) format("opentype");font-weight:200;font-style:normal;font-stretch:normal;unicode-range:U+0020-00FE}
 @font-face{font-family:'DIN Next LT Pro';src:url(../fonts/DINNextLTPro-Regular.eot);src:url(../fonts/DINNextLTPro-Regulard41d.eot?#iefix) format("embedded-opentype"),url(../fonts/DINNextLTPro-Regular.html) format("woff2"),url(../fonts/DINNextLTPro-Regular.woff) format("woff"),url(../fonts/DINNextLTPro-Regular.ttf) format("truetype"),url(../fonts/DINNextLTPro-Regular.otf) format("opentype");font-weight:400;font-style:normal;font-stretch:normal}
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap');
+* {
+    font-family: 'Source Sans Pro', sans-serif !important;
+}
 html{font-size:16px}
 body{overflow-x:hidden;position:relative;font-family:Roboto,sans-serif;font-weight:300;color:#000;font-size:16px;font-size:1rem;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
 .relative{position:relative}
