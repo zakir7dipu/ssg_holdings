@@ -13,97 +13,26 @@
                 <div class="col-xs-12">
                     <div class="carousel-wrapper has-shadow">
                         <div class="carousel-primary slick-theme">
+                            {% if projects|length %}
+                                {% for project in projects %}
+                                    <div class="carousel-item">
+                                        <div class="inner">
+                                            <a href="#">
+                                                <div class="image-thumb high-contrast">
+                                                    <img src="{{ project.project_thumb.path }}" alt="The Sanctum" title="The Sanctum"/>
+                                                </div>
+                                                <h3 class="title">{{project.name}}</h3>
+                                                <h5 class="sub-title">{{project.address}}</h5>
+                                                <span class="read-more">{{project.type}}</span>
 
-                            <div class="carousel-item">
-                                <div class="inner">
-                                    <a href="/project">
-                                        <div class="image-thumb high-contrast">
-                                            <img src="{{ 'assets/images/landmark/1627919131g61t1.jpg'|theme }}"
-                                                 alt="The Sanctum"
-                                                 title="The Sanctum"/>
+                                            </a>
                                         </div>
-                                        <h3 class="title">The Sanctum</h3>
-                                        <h5 class="sub-title">Road 81, Gulshan</h5>
-                                        <span class="read-more">
-                                                    Residential                                                </span>
-
-                                    </a>
-                                </div>
-                            </div>
-
-
-                            <div class="carousel-item">
-                                <div class="inner">
-                                    <a href="/project">
-                                        <div class="image-thumb high-contrast">
-                                            <img src="{{ 'assets/images/landmark/1568696181NnsJf.jpg'|theme }}"
-                                                 alt="Pinnacle"
-                                                 title="Pinnacle">
-                                        </div>
-                                        <h3 class="title">Pinnacle</h3>
-                                        <h5 class="sub-title">Tejgaon</h5>
-                                        <span class="read-more">
-                                                    Commercial                                                </span>
-
-                                    </a>
-                                </div>
-                            </div>
-
-
-                            <div class="carousel-item">
-                                <div class="inner">
-                                    <a href="/project">
-                                        <div class="image-thumb high-contrast">
-                                            <img src="{{ 'assets/images/landmark/1631774896MfKrh.jpg'|theme }}"
-                                                 alt="Pristine"
-                                                 title="Pristine">
-                                        </div>
-                                        <h3 class="title">Pristine</h3>
-                                        <h5 class="sub-title">Road 10, Baridhara</h5>
-                                        <span class="read-more">
-                                                    Residential                                                </span>
-
-                                    </a>
-                                </div>
-                            </div>
-
-
-                            <div class="carousel-item">
-                                <div class="inner">
-                                    <a href="/project">
-                                        <div class="image-thumb high-contrast">
-                                            <img src="{{ 'assets/images/landmark/1635247386xAync.jpg'|theme }}"
-                                                 alt="Zephyr"
-                                                 title="Zephyr">
-                                        </div>
-                                        <h3 class="title">Zephyr</h3>
-                                        <h5 class="sub-title">Road 100 & 103, Gulshan</h5>
-                                        <span class="read-more">
-                                                    Residential                                                </span>
-
-                                    </a>
-                                </div>
-                            </div>
-
-
-                            <div class="carousel-item">
-                                <div class="inner">
-                                    <a href="/project">
-                                        <div class="image-thumb high-contrast">
-                                            <img src="{{ 'assets/images/landmark/1633327175LaeLW.jpg'|theme }}"
-                                                 alt="Aura"
-                                                 title="Aura">
-                                        </div>
-                                        <h3 class="title">Aura</h3>
-                                        <h5 class="sub-title">Road 83, Gulshan</h5>
-                                        <span class="read-more">
-                                                    Residential                                                </span>
-
-                                    </a>
-                                </div>
-                            </div>
+                                    </div>
+                                {% endfor %}
+                            {% endif %}
 
                         </div>
+
                         <div class="carousel-nav">
                             <img class='prev slick-prev'
                                  src="{{ 'assets/img/icons/arrow_Dark_left.svg'|theme }}" data-src="{{ 'assets/img/icons/arrow_colored_left.svg'|theme }}"

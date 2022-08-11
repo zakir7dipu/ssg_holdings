@@ -12,12 +12,12 @@ fields:
     architect_name:
         label: 'Project architect'
         span: auto
-        required: 1
+        required: 0
         type: text
     land_area:
         label: 'Land Area'
         span: auto
-        required: 1
+        required: 0
         type: text
     sub_title:
         label: 'Project in short'
@@ -26,7 +26,7 @@ fields:
     land_orientation:
         label: 'Land Orientation'
         span: auto
-        required: 1
+        required: 0
         type: text
     facing:
         label: Facing
@@ -46,10 +46,6 @@ fields:
         label: 'Size of units'
         span: auto
         type: text
-    basement_number:
-        label: 'Number of basements'
-        span: auto
-        type: text
     car_parking:
         label: 'Number of car parking'
         span: auto
@@ -57,7 +53,7 @@ fields:
     rajuk_approval_no:
         label: 'RAJUK Approval No.'
         span: auto
-        required: 1
+        required: 0
         type: text
     feature_amenitie:
         label: 'Project''s features & amenities'
@@ -97,7 +93,7 @@ fields:
             mode: crop
             extension: auto
         span: auto
-        required: 1
+        required: 0
         type: fileupload
         commentAbove: 'File size will be 650px X 650px'
     project_banner:
@@ -110,7 +106,7 @@ fields:
             mode: crop
             extension: auto
         span: auto
-        required: 1
+        required: 0
         type: fileupload
         commentAbove: 'File size will be 1230px X 739px'
     left_side:
@@ -123,7 +119,7 @@ fields:
             mode: crop
             extension: auto
         span: auto
-        required: 1
+        required: 0
         type: fileupload
         commentAbove: 'File size will be 600px X 800px'
     right_side:
@@ -136,7 +132,7 @@ fields:
             mode: crop
             extension: auto
         span: auto
-        required: 1
+        required: 0
         type: fileupload
         commentAbove: 'File size will be 1300px X 650px'
     gallery:

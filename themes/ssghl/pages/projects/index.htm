@@ -1,0 +1,112 @@
+title = "Completed"
+url = "/project/:project_id"
+layout = "default"
+is_hidden = 0
+==
+<?php
+use zakir7dipu\Project\Models\Projectategory;
+
+function onStart(){
+
+}
+?>
+==
+
+<!--     $this['currentUrl'] = $this->pageParams(''); -->
+<!--     $this['categories'] = Projectategory::where('name', true)->get(); -->
+<!--     $this['products'] = Products::where('category_id', 2)->orderBy("id","DESC")->paginate(12); -->
+
+<section class="banner-secondary projects-cat-banner">
+    <div class="container-fluid">
+        <h1 class="heading-primary style-1"><span>Completed<br/></span>Witness the achievements </h1>
+        {{ this.page.title }}
+    </div>
+</section>
+
+<section class="projects-ongoing">
+    <div class="container-fluid projects-listings-nav-wrapper">
+        <div class="projects-listings">
+            <ul class="sorting-nav controls">
+                <li class="active">
+                    <span class="control" data-filter="all">All</span>
+                </li>
+                <li class="control">
+                    <span class="control" data-filter=".residential">Residential</span>
+                </li>
+                <li class="control">
+                    <span class="control" data-filter=".commercial">Commercial</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="projects-wrapper">
+        <div class="clearfix mixitup-container">
+            <div data-ref="mixitup-target" class="mixit-item residential   custom-col-xs-6 col-md-4 col-sm-6 no-pad square">
+                <a href="/project">
+                    <div class="relative" style="overflow: hidden">
+<!--                         <p class="soldout">Sold Out!</p> -->
+                        <div class="bg-thumb high-contrast">
+                            <div class="bg-thumb-inner" style="background-image: url('https://shantaholdings.com/admin/uploads/product/asdads/650x650/15987551385pNoK.jpg')">
+                            </div>
+                        </div>
+                        <div class="thumb-desc">
+                            <h4 class="project-name">The Regal</h4>
+                            <span class="project-address">Road 84, Gulshan</span>
+                        </div>
+                    </div>
+
+                    <div class="thumb-overlay">
+                        <h4 class="project-name">The Regal</h4>
+                        <span class="project-address">Road 84, Gulshan</span>
+                        <hr class="overlay-line">
+                        <p>Who decisively attachment has dispatched. Fruit defer in party me built under first. Forbade him but savings sending ham general. So play do in near park that pain. </p>
+                    </div>
+                </a>
+            </div>
+
+            <div data-ref="mixitup-target" class="mixit-item commercial   custom-col-xs-6 col-md-4 col-sm-6 no-pad square">
+                <a href="/project">
+                    <div class="relative" style="overflow: hidden">
+<!--                         <p class="soldout">Sold Out!</p> -->
+                        <div class="bg-thumb high-contrast">
+                            <div class="bg-thumb-inner" style="background-image: url('https://shantaholdings.com/admin/uploads/product/asdads/650x650/15987552739eII9.jpg')"></div>
+                        </div>
+                        <div class="thumb-desc">
+                            <h4 class="project-name">Forum</h4>
+                            <span class="project-address">Tejgaon</span>
+                        </div>
+                    </div>
+
+                    <div class="thumb-overlay">
+                        <h4 class="project-name">Forum</h4>
+                        <span class="project-address">Tejgaon</span>
+                        <hr class="overlay-line">
+                        <p>Who decisively attachment has dispatched. Fruit defer in party me built under first. Forbade him but savings sending ham general. So play do in near park that pain. </p>
+                    </div>
+                </a>
+            </div>
+
+            <div data-ref="mixitup-target" class="mixit-item residential   custom-col-xs-6 col-md-4 col-sm-6 no-pad square">
+                <a href="/project">
+                    <div class="relative" style="overflow: hidden">
+                        <div class="bg-thumb high-contrast">
+                            <div class="bg-thumb-inner" style="background-image: url('https://shantaholdings.com/admin/uploads/product/unnamed-gulshan/650x650/1633327175LaeLW.jpg')"></div>
+                        </div>
+                        <div class="thumb-desc">
+                            <h4 class="project-name">Aura</h4>
+                            <span class="project-address">Road 83, Gulshan</span>
+                        </div>
+                    </div>
+
+                    <div class="thumb-overlay">
+                        <h4 class="project-name">Aura</h4>
+                        <span class="project-address">Road 83, Gulshan</span>
+                        <hr class="overlay-line">
+                        <p>Who decisively attachment has dispatched. Fruit defer in party me built under first. Forbade him but savings sending ham general. So play do in near park that pain. </p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>

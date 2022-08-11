@@ -1,0 +1,36 @@
+<div class="projects-wrapper">
+        <div class="clearfix mixitup-container">
+        {% if projects|length %}
+            {% for project in projects %}
+                <div data-ref="mixitup-target" class="mixit-item residential   custom-col-xs-6 col-md-4 col-sm-6 no-pad square">
+                <a href="#">
+                    <div class="relative" style="overflow: hidden">
+                        <div class="bg-thumb high-contrast">
+                            <div class="bg-thumb-inner" style="background-image: url({{project.project_thumb.path}})">
+                            </div>
+                        </div>
+                        <div class="thumb-desc">
+                            <h4 class="project-name">{{project.name}}</h4>
+                            <span class="project-address">{{project.address}}</span>
+                        </div>
+                    </div>
+
+                    <div class="thumb-overlay">
+                        <h4 class="project-name">The Regal</h4>
+                        <span class="project-address">Road 84, Gulshan</span>
+                        <hr class="overlay-line">
+                        <p>Who decisively attachment has dispatched. Fruit defer in party me built under first. Forbade him but savings sending ham general. So play do in near park that pain. </p>
+                    </div>
+                </a>
+            </div>
+            {% endfor %}
+        {% else %}
+            <h4 class="text-center">No Project Found</h4>
+        {% endif %}
+        </div>
+        {% if projects|length %}
+            <div class="pagination_container">
+                {{ projects.render|raw }}
+            </div>
+        {% endif %}
+    </div>

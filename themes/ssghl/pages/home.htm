@@ -5,15 +5,15 @@ is_hidden = 0
 ==
 <?php
 use zakir7dipu\slider\Models\BannerSlider;
+use zakir7dipu\Project\Models\Project;
 
 function onStart(){
     $this['banner_sliders'] = BannerSlider::orderBy('name','ASC')->with('banner')->get();
+    $this['projects'] = Project::where('feature_project', true)->with('project_thumb')->get();
 }
 ?>
 ==
 
-<!-- {% partial 'popupvideo' %} -->
 {% partial 'slider2' %}
 {% partial 'landmark' %}
 {% partial 'feature' %}
-{% partial 'gallery' %}
