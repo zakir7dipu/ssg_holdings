@@ -1557,3 +1557,9 @@ section{width:100%;float:left}
 .pagination_container .pagination .active span{background-color: rgba(168,35,127,1);border-color: rgba(168,35,127,1);font-weight: bold;font-size: 13pt;}
 .pagination_container .pagination a{color: rgba(168,35,127,1);font-weight: bold;font-size: 13pt;}
 .pagination_container .pagination a:hover{background-color: rgba(168,35,127,.4);font-weight: bold;font-size: 13pt;}
+.mission_and_vision, .banner-secondary-fullwidth {width: 100vw;cursor: none;}
+.projects-cat-banner {background-image: none;}
+.banner-secondary-fullwidth {margin-top: 98px;height: 220px;}
+@media screen and (max-width: 600px) {
+    .banner-secondary-fullwidth {height: 95px;}
+}
