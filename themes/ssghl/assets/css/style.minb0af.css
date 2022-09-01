@@ -344,7 +344,7 @@ ol,ul{margin-bottom:0;padding:0}
 .banner-slider-wrapper .fullscreen-content.up{-webkit-transform:translateY(-100vh);transform:translateY(-100vh);-webkit-transition-delay:.15s;transition-delay:.15s}
 .banner-slider-wrapper .fullscreen-content.up .overlay-layer{-webkit-transform:translateY(-100vh);transform:translateY(-100vh);-webkit-transition-delay:.1s;transition-delay:.1s;-webkit-transition:all 12.5s cubic-bezier(.19,1,.22,1);transition:all 12.5s cubic-bezier(.19,1,.22,1)}
 .banner-slider-wrapper .fullscreen-content.up .container-fluid{-webkit-transform:translateY(-100vh);transform:translateY(-100vh);-webkit-transition-delay:0s;transition-delay:0s}
-.banner-slider-wrapper .scroll-down{overflow:hidden;position:absolute;z-index:50;display:inline-block;left:50px;bottom:23px;width:40px;height:40px;border-radius:50%;background-color:rgba(0,0,0,.8);text-align:center;-webkit-transition:all .6s cubic-bezier(.19,1,.22,1);transition:all .6s cubic-bezier(.19,1,.22,1);-webkit-animation:bounce 2s infinite;animation:bounce 2s infinite}
+.banner-slider-wrapper .scroll-down{overflow:hidden;position:absolute;z-index:50;display:inline-block;left:50px;bottom:23px;width:40px;height:40px;border-radius:50%;background-color:rgba(168,35,127,.8);text-align:center;-webkit-transition:all .6s cubic-bezier(.19,1,.22,1);transition:all .6s cubic-bezier(.19,1,.22,1);-webkit-animation:bounce 2s infinite;animation:bounce 2s infinite}
 .banner-slider-wrapper .scroll-down:hover{background-color:rgba(0,0,0,.1)}
 .banner-slider-wrapper .scroll-down>img{width:14px;height:16px;vertical-align:middle;display:inline-block;margin-top:11px}
 .banner-slider-wrapper .banner-bar{height:65px;width:100%;background:-webkit-gradient(linear,left bottom,left top,from(rgba(0,0,0,.47)),to(rgba(58,58,58,0)));background:linear-gradient(to top,rgba(0,0,0,.47),rgba(58,58,58,0));position:absolute;left:0;bottom:0;z-index:48}
@@ -543,7 +543,7 @@ to{stroke-dashoffset:0}
 .our-background .content-holder:before{bottom:100%;margin-bottom:-1px}
 .our-background .content-holder:after{top:100%;margin-top:-1px}
 #lands-to-landmark{position:relative}
-#lands-to-landmark:after{content:"";display:block;position:absolute;top:0;left:0;background-image:url(../img/cy-sketch.jpg);width:100%;height:100%;z-index:1}
+#lands-to-landmark:after{content:"";display:block;position:absolute;top:0;left:0;background-image:url(../img/Home_Page_Project_Background.jpg);background-size: cover;background-repeat: no-repeat;background-position: center center;width:100%;height:100%;z-index:1}
 #lands-to-landmark>div{position:relative;z-index:2}
 .missionContent{display: flex; justify-content: center; align-items: center; height: 300px; padding-top: 40px;}
 .mission-box{outline:4px solid #fff;font-weight:100;position:relative;height:0;padding-bottom:100%;overflow:hidden}
@@ -1208,7 +1208,7 @@ img.Popup-close.Popup-close-icon{right:-22px;top:-22px;left:auto;bottom:auto;cur
 .logo-top #undefined-sticky-wrapper{height:auto!important}
 .logo-wrapper{position:relative;width:180px;overflow:hidden;float:left;margin-right:70px;margin-top:3px;margin-bottom:3px}
 .logo{height:86px;line-height:86px;max-height:86px;display:block;-webkit-transition:all .3s ease-out;transition:all .3s ease-out}
-.logo-img{display:inline-block;max-height:100%;max-width:100%;width:150px;height:150px;vertical-align:middle}
+.logo-img{display:inline-block;max-height:100%;max-width:100%;/*width:150px;height:150px*/;vertical-align:middle}
 .logo-light{display:none}
 .header-floating,.header-transparent{position:fixed;top:0;left:0;width:100%;z-index:999}
 .header-transparent.header-transparent-dark{background-color:rgba(168,35,127,.9)}
@@ -1563,3 +1563,9 @@ section{width:100%;float:left}
 @media screen and (max-width: 600px) {
     .banner-secondary-fullwidth {height: 95px;}
 }
+.content-info-section {background-size: contain !important;background-position: center center;background-repeat: no-repeat;}
+.content-info-section .content-holder .heading-primary {color: rgba(168,35,127,.6);font-weight: 700;}
+.content-info-section .content-holder .heading-secendary {color: rgba(168,35,127,1);font-weight: 600;font-size: 18pt;}
+.content-info-section .content-holder .heading-thered {color: rgba(168,35,127,1);font-weight: 600;font-size: 14pt;}
+.content-info-section .content-holder {color: rgba(168,35,127,1);font-weight: 400;font-size: 14pt;}
+.ssg-parpel {background-image: linear-gradient(to right, rgb(168,35,127), rgb(251, 142, 225));}

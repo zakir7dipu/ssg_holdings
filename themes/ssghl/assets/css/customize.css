@@ -45,7 +45,7 @@ a.animate-scroll.scroll-up {
     position: absolute;
     width: 40px;
     height: 40px;
-    background-color: #000;
+    background-color: rgb(168,35,127);
     padding: 10px;
     border-radius: 50%;
     text-align: center;
