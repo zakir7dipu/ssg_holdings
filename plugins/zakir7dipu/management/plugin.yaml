@@ -1,0 +1,17 @@
+plugin:
+    name: 'zakir7dipu.management::lang.plugin.name'
+    description: 'zakir7dipu.management::lang.plugin.description'
+    author: zakir7dipu
+    icon: wn-icon-users
+    replaces: {  }
+permissions:
+    management_access:
+        tab: management_access
+        label: 'Management Access'
+navigation:
+    main-menu-item:
+        label: Management
+        url: zakir7dipu/management/managementcontroller
+        icon: icon-users
+        permissions:
+            - management_access

@@ -3,21 +3,26 @@ url = "/management-team"
 layout = "default"
 is_hidden = 0
 ==
+<?php
+use zakir7dipu\Management\Models\Managements;
+
+function onStart(){
+    $this['managements'] = Managements::with('management_image')->get();
+}
+?>
+==
+
     <div class="banner-slider-wrapper overflow-hidden">
         <a href="#management-team" class="animate-scroll scroll-down">
             <img src="{{'assets/img/icons/arrow-down.svg'|theme}}" alt="down arrow">
         </a>
-        <div class="no-pad project-detail-info fullscreen-content general-page">
+        <div class="no-pad project-detail-info fullscreen-content general-page page-title-wrapper">
             <div class="overlay-layer"
                  style="background-color: #231F20;"></div>
-            <div class="container-fluid full-height full-height-sm">
-
-                <div class="row  full-height text-center no-margin table-all">
-                    <div class="col-sm-12 project-short-info full-height full-height-sm table-cell-all table-cell-all-vertical">
-
-                        <h3 class="heading-fourth text-white mb-20 hover-line inline-block">About us</h3>
-                        <h2 class="heading-primary text-white">Management</h2>
-                    </div>
+                 <div class="page-title">
+                <div class="container">
+                    <h3 class="heading-fourth text-white mb-20 hover-line inline-block">About us</h3>
+                    <h2 class="heading-primary text-white">Top Management</h2>
                 </div>
             </div>
         </div>
@@ -28,136 +33,35 @@ is_hidden = 0
 
     </div>
 
-<!--     <section id="habibul-basit" class="pb-0 pt-70 features_amenities no-bg"> -->
-<!--         <div class="container-fluid"> -->
-<!--             <div class="mb-60"> -->
-<!--                 <h2 class="heading-primary text-off-white">CHAIRMAN</h2> -->
-<!--             </div> -->
-<!--             <div class="top-management-members row image-align-left"> -->
-<!--                 <div class="col-sm-6 col-md-5 "> -->
-<!--                     <div class="image-box-holder"> -->
-<!--                         <div class="image-box no-shadow " style="background-image: url({{'assets/images/003.jpg'|theme}});"> -->
-<!--                         </div> -->
-<!--                     </div> -->
-<!--                 </div> -->
-<!--                 <div class="col-sm-6 col-md-6 image-box-side-content"> -->
-<!--                     <div class="feature-details-box-wrapper mb-50"> -->
-<!--                         <div class="feature-details mt-20"> -->
-<!--                             <div class="mb-30"> -->
-<!--                                 <h3 class="board-member-title text-uppercase">Mohammed Ibrahim</h3> -->
-
-<!--                                 <h4 class="board-member-desig text-uppercase">CHAIRMAN</h4> -->
-<!--                             </div> -->
-<!--                             <div class="line line--full line--1 line--grey mb-20"></div> -->
-<!--                             <div class="board-member-details"> -->
-<!--                                 <p>The delegation of authority, humble leadership, vigilant management and persistence in quality, are the core pillars of Group’s success. Maintaining quality and state-of-the-art manufacturing, Super Star Group has emerged as one of the largest manufacturers in the field of Electrical and Electronics.</p> -->
-<!--                                 <p>In accordance with our Company Creed of “Fairness, Innovation, and Harmony,” the Super Star Group reaffirms its commitment to social and economic development through fair and upright corporate activities. We believe that strong corporate governance must form the foundation of this mission, and we have therefore positioned strengthening governance as one of our most important management priorities.</p> -->
-<!--                                 <p>Here at our organization, we believe that each and every consumer deserves quality products. It is our basic right. We have firmly upheld the core vision of offering the highest quality products. Now, more than two decades later, we are reinventing ourselves as Super Star Group, and that same dedication to quality will be our link to our legacy.</p> -->
-<!--                                 <br/> -->
-<!--                                 <p>We thus intend to quickly respond to these changing times earnestly and appropriately with the aim of realizing even stronger corporate governance and, during the course of these activities, increasing our corporate value. I would like to invite all our trusted consumers and partners in the form of consumers, retailers, and wholesalers to stay with us for the exciting journey ahead for a beautiful Bangladesh.</p> -->
-<!--                         </div> -->
-<!--                     </div> -->
-<!--                 </div> -->
-<!--             </div> -->
-<!--         </div> -->
-<!--     </section> -->
-
     <section class="section-gap pb-0 pt-80">
         <div class="container-fluid">
             <div class="mb-60">
-                <h2 class="heading-primary text-off-white">Senior Management</h2>
+                <h2 class="heading-primary text-off-white">Top Management</h2>
             </div>
             <div class="row member-list">
-
-                <div class="member-list-item custom-col-xs-6 col-sm-6 col-md-3">
-                    <div class="member-thumb-wrapper pb-60 mb-30">
-                        <img src="{{'assets/images/management.jpg'|theme}}" alt="">
+            {% if managements|length %}
+                {% for management in managements %}
+                <div class="member-list-item custom-col-xs-6 col-sm-6 col-md-4">
+                    <div class="management-member-thumb pb-60 mb-30 text-center">
+                        <img src="{{ management.management_image.path }}" alt="" class="management-image">
                     </div>
-                    <div class="member-info">
+                    <div class="member-info management-info">
                         <div class="top-info">
-                            <h3 class="board-member-title text-uppercase">Name</h3>
-                            <h4 class="board-member-desig text-uppercase">Designation</h4>
+                            <h3 class="board-member-title text-uppercase">{{ management.name }}</h3>
+                            <h4 class="board-member-desig text-uppercase text-black">{{ management.designation }}</h4>
+                            <h4 class="board-member-desig text-uppercase text-grey">{{ management.company }}</h4>
                         </div>
+                        {% if management.about %}
                         <div class="details-info">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.<br />
                                             <br /></div>
                         <button class="member-details-expand"></button>
+                        {% endif %}
                     </div>
                 </div>
-
-                <div class="member-list-item custom-col-xs-6 col-sm-6 col-md-3">
-                    <div class="member-thumb-wrapper pb-60 mb-30">
-                        <img src="{{'assets/images/management.jpg'|theme}}" alt="">
-                    </div>
-                    <div class="member-info">
-                        <div class="top-info">
-                            <h3 class="board-member-title text-uppercase">Name</h3>
-                            <h4 class="board-member-desig text-uppercase">Designation</h4>
-                        </div>
-                        <div class="details-info">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.<br />
-                                            <br /></div>
-                        <button class="member-details-expand"></button>
-                    </div>
-                </div>
-
-                <div class="member-list-item custom-col-xs-6 col-sm-6 col-md-3">
-                    <div class="member-thumb-wrapper pb-60 mb-30">
-                        <img src="{{'assets/images/management.jpg'|theme}}" alt="">
-                    </div>
-                    <div class="member-info">
-                        <div class="top-info">
-                            <h3 class="board-member-title text-uppercase">Name</h3>
-                            <h4 class="board-member-desig text-uppercase">Designation</h4>
-                        </div>
-                        <div class="details-info">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.<br />
-                                            <br /></div>
-                        <button class="member-details-expand"></button>
-                    </div>
-                </div>
-
-                <div class="member-list-item custom-col-xs-6 col-sm-6 col-md-3">
-                    <div class="member-thumb-wrapper pb-60 mb-30">
-                        <img src="{{'assets/images/management.jpg'|theme}}" alt="">
-                    </div>
-                    <div class="member-info">
-                        <div class="top-info">
-                            <h3 class="board-member-title text-uppercase">Name</h3>
-                            <h4 class="board-member-desig text-uppercase">Designation</h4>
-                        </div>
-                        <div class="details-info">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.<br />
-                                            <br /></div>
-                        <button class="member-details-expand"></button>
-                    </div>
-                </div>
-
-                <div class="member-list-item custom-col-xs-6 col-sm-6 col-md-3">
-                    <div class="member-thumb-wrapper pb-60 mb-30">
-                        <img src="{{'assets/images/management.jpg'|theme}}" alt="">
-                    </div>
-                    <div class="member-info">
-                        <div class="top-info">
-                            <h3 class="board-member-title text-uppercase">Name</h3>
-                            <h4 class="board-member-desig text-uppercase">Designation</h4>
-                        </div>
-                        <div class="details-info">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.<br />
-                                            <br /></div>
-                        <button class="member-details-expand"></button>
-                    </div>
-                </div>
-
-                <div class="member-list-item custom-col-xs-6 col-sm-6 col-md-3">
-                    <div class="member-thumb-wrapper pb-60 mb-30">
-                        <img src="{{'assets/images/management.jpg'|theme}}" alt="">
-                    </div>
-                    <div class="member-info">
-                        <div class="top-info">
-                            <h3 class="board-member-title text-uppercase">Name</h3>
-                            <h4 class="board-member-desig text-uppercase">Designation</h4>
-                        </div>
-                        <div class="details-info">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.<br />
-                                            <br /></div>
-                        <button class="member-details-expand"></button>
-                    </div>
-                </div>
+                {% endfor %}
+            {% else %}
+                <h4 class="text-center">No Data Found.</h4>
+            {% endif %}
 
             </div>
         </div>

@@ -1,0 +1,31 @@
+fields:
+    name:
+        label: Name
+        span: auto
+        required: 1
+        type: text
+    designation:
+        label: Designation
+        span: auto
+        required: 1
+        type: text
+    about:
+        label: Message
+        size: ''
+        span: full
+        type: textarea
+    management_image:
+        label: Image
+        span: left
+        mode: image
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        required: 1
+        type: fileupload
+        commentAbove: 'Image will be 332px X 354px'
+    company:
+        label: Company
+        span: auto
+        type: text

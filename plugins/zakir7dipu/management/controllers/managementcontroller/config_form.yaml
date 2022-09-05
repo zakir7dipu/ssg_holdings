@@ -1,0 +1,10 @@
+name: ManagementController
+form: $/zakir7dipu/management/models/managements/management_fields.yaml
+modelClass: Zakir7dipu\Management\Models\Managements
+defaultRedirect: zakir7dipu/management/managementcontroller
+create:
+    redirect: 'zakir7dipu/management/managementcontroller/update/:id'
+    redirectClose: zakir7dipu/management/managementcontroller
+update:
+    redirect: zakir7dipu/management/managementcontroller
+    redirectClose: zakir7dipu/management/managementcontroller

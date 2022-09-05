@@ -1,0 +1,12 @@
+list: $/zakir7dipu/management/models/managements/columns.yaml
+modelClass: Zakir7dipu\Management\Models\Managements
+title: ManagementController
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+recordsPerPage: 20
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'
+recordUrl: 'zakir7dipu/management/managementcontroller/update/:id'
