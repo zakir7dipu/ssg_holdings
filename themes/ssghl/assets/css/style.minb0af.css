@@ -1208,9 +1208,9 @@ img.Popup-close.Popup-close-icon{right:-22px;top:-22px;left:auto;bottom:auto;cur
 .menu-fixed .main-header{z-index:9999;width:100%;left:0;-webkit-box-shadow:0 0 10px rgba(0,0,0,.3);box-shadow:0 0 10px rgba(0,0,0,.3);-webkit-transition:all .3s ease-out;transition:all .3s ease-out;-webkit-backface-visibility:hidden}
 .menu-fixed .logo{height:65px;line-height:65px;max-height:65px;-webkit-transition:all .3s ease-out;transition:all .3s ease-out}
 .logo-top #undefined-sticky-wrapper{height:auto!important}
-.logo-wrapper{position:relative;width:180px;overflow:hidden;float:left;margin-right:70px;margin-top:3px;margin-bottom:3px}
-.logo{height:86px;line-height:86px;max-height:86px;display:block;-webkit-transition:all .3s ease-out;transition:all .3s ease-out}
-.logo-img{display:inline-block;max-height:100%;max-width:100%;/*width:150px;height:150px*/;vertical-align:middle}
+.logo-wrapper{position:relative;width:150px;height:80px;overflow:hidden;float:left;margin-right:30px;margin-top:3px;margin-bottom:3px}
+.logo{height:80px;/*line-height:86px;max-height:86px;*/display:block;-webkit-transition:all .3s ease-out;transition:all .3s ease-out}
+.logo-img{display:inline-block;min-height:100%;min-width:100%;/*width: 150px;height: 120px;*/vertical-align:middle}
 .logo-light{display:none}
 .header-floating,.header-transparent{position:fixed;top:0;left:0;width:100%;z-index:999}
 .header-transparent.header-transparent-dark{background-color:rgba(168,35,127,.9)}
@@ -1224,7 +1224,7 @@ img.Popup-close.Popup-close-icon{right:-22px;top:-22px;left:auto;bottom:auto;cur
 .open-menu-position.opened{right:300px}
 section{width:100%;float:left}
 .menu li a{font-size:15px}
-.logo{height:55px;min-height:55px;line-height:55px}
+/* .logo{height:55px;min-height:55px;line-height:55px} */
 .menu>li>a{padding:15px 30px;font-size:13pt;height:60px;line-height:32px}
 .menu-fixed-light .menu-fixed .main-header{background-color:rgba(0,0,0,.6)}
 .menu-fixed .logo{height:55px;line-height:55px;min-height:55px}
@@ -1593,3 +1593,4 @@ section{width:100%;float:left}
 .news_events .card .card-body .card-title {font-weight: 700;line-height: 3rem;}
 .news_events .card .center-border {display: inline;border: 1px solid #cecece;margin: 30px 0px;}
 .bg-white {background-color: #fff;}
+.steckholder-image {width: 100% !important; margin: 20px 0px;}

@@ -4,12 +4,12 @@ layout = "default"
 is_hidden = 0
 ==
 <?php
-use zakir7dipu\Project\Models\Projectcategory;
+use zakir7dipu\Project\Models\ProjectCategory;
 use zakir7dipu\Project\Models\Project;
 
 function onStart(){
     $title = $this->page->title;
-    $category = Projectcategory::where('name',$title)->first();
+    $category = ProjectCategory::where('name',$title)->first();
     $this['projects'] = Project::where('category_id', $category->id)->with('project_thumb')->paginate(6);
 }
 ?>
